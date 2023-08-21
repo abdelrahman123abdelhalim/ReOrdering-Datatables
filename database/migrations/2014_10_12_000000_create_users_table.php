@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('email')->unique();
+            $table->integer('order')->unsigned()->default(0);
             $table->timestamps();
         });
     }
